@@ -67,7 +67,7 @@ if !isdirectory(s:dein_repo_dir)
         endif
         let &runtimepath = s:dein_repo_dir .",". &runtimepath
         " プラグイン読み込み＆キャッシュ作成
-        let s:toml_file = fnamemodify(expand('<sfile>'), ':h').'/dotfiles/dein.toml'
+        let s:toml_file = fnamemodify(expand('<sfile>'), ':h').'/dein.toml'
         if dein#load_state(s:dein_dir)
         call dein#begin(s:dein_dir, [$MYVIMRC, s:toml_file])
         call dein#load_toml(s:toml_file)
@@ -128,7 +128,7 @@ let g:session_default_name = '.default.session'
 " session保持ファイルの拡張子
 let g:session_extension = '.vim'
 " session保存ディレクトリを現在のディレクトリにする
-let g:session_directory = getcwd()
+let g:session_directory = '~/.vimsessions/'
 " vim終了時に自動保存しない
 let g:session_autosave = 'no'
 " 引数なしでvimを起動した時にセッションを復元しない
