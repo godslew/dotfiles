@@ -49,6 +49,7 @@ set grepprg=grep\ -nh
  "   " 検索結果のハイライトをEsc連打でクリアする
 nnoremap <ESC><ESC> :nohlsearch<CR>
 nnoremap <silent> <Leader>vi :<C-u>VimFiler -split -simple -winwidth=35 -no-quit<CR>
+let g:vimfiler_safe_mode_by_default = 0
 if !&compatible
           set nocompatible
   endif
