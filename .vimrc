@@ -186,3 +186,4 @@ if executable('hw')
   let g:unite_source_grep_default_opts = '--no-group --no-color'
   let g:unite_source_grep_recursive_opt = ''
 endif
+
