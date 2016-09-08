@@ -41,7 +41,11 @@ set showmatch
  " 
  " "新しい行を作った時に高度な自動インデントを行う
 set smarttab
- "  
+
+"tab 8 -> ?
+
+"undodir
+set undodir=$HOME/.vimundo
  "  " grep検索を設定する
 set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m,%f
 set grepprg=grep\ -nh
@@ -50,6 +54,8 @@ set grepprg=grep\ -nh
 nnoremap <ESC><ESC> :nohlsearch<CR>
 nnoremap <silent> <Leader>vi :<C-u>VimFiler -split -simple -winwidth=35 -no-quit<CR>
 let g:vimfiler_safe_mode_by_default = 0
+let g:vimfiler_as_default_explorer = 1
+
 if !&compatible
           set nocompatible
   endif
@@ -173,9 +179,9 @@ command! -nargs=? SaveS call s:save_session(<f-args>)
 command! -nargs=? LoadS call s:load_session(<f-args>)
 
 ""unite grep
-nnoremap <silent> ,g  :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+nnoremap <silent> ,g  :<C-u>Unite grep/git:/. -buffer-name=search-buffer<CR>
 " カーソル位置の単語をgrep検索
-nnoremap <silent> ,cg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W><CR>
+nnoremap <silent> ,cg :<C-u>Unite grep/git:/. -buffer-name=search-buffer<CR><C-R><C-W><CR>
 " grep検索結果の再呼出
 nnoremap <silent> ,r  :<C-u>UniteResume search-buffer<CR>
 
