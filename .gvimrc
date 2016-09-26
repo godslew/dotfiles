@@ -1,6 +1,5 @@
 set showtabline=2
 set transparency=5
-set imdisable
 set guioptions-=T
 set antialias
 set tabstop=4

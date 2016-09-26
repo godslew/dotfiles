@@ -56,11 +56,7 @@ nnoremap <silent> <Leader>vi :<C-u>VimFiler -split -simple -winwidth=35 -no-quit
 let g:vimfiler_safe_mode_by_default = 0
 let g:vimfiler_as_default_explorer = 1
 
-if !&compatible
-          set nocompatible
-  endif
-
- augroup MyAutoCmd
+augroup MyAutoCmd
    autocmd!
    augroup END
 
