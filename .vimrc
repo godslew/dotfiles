@@ -155,6 +155,29 @@ if executable('hw')
         let g:unite_source_grep_recursive_opt = ''
 endif
 
+" git-vim
+let g:git_bin = executable('hub') ? 'hub' : 'git'
+let g:git_command_edit = 'vnew'
+let g:git_no_default_mappings = 1
+nnoremap gA :<C-U>GitAdd<Space>
+nnoremap <silent>ga :<C-U>GitAdd<CR>
+nnoremap gp :<C-U>Git push<Space>
+nnoremap gD :<C-U>GitDiff<Space>
+nnoremap gDD :<C-U>GitDiff HEAD<CR>
+nnoremap git :<C-U>Git<Space>
+
+" fugitive
+nnoremap <silent>gM :Gcommit --amend<CR>
+nnoremap <silent>gb :Gblame<CR>
+nnoremap <silent>gB :Gbrowse<CR>
+nnoremap <silent>gm :Gcommit<CR>
+
+""vim-unite-giti
+nnoremap <silent>gl :Unite giti/log -no-start-insert -horizontal<CR>
+nnoremap <silent>gP :Unite giti/pull_request/base -no-start-insert -horizontal<CR>
+nnoremap <silent>gs :Unite giti/status -no-start-insert -horizontal<CR>
+nnoremap <silent>gh :Unite giti/branch_all -no-start-insert<CR>
+
 "unite.vim
 "" バッファ一覧
 nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
