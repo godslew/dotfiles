@@ -61,3 +61,19 @@ repo = 'Townk/vim-autoclose'
 
 [[plugins]]
 repo = 'jason0x43/vim-js-indent'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+[[plugins]]
+repo = 'osyo-manga/shabadou.vim'
+
+
+[[plugins]]
+repo = 'osyo-manga/vim-watchdogs'
+
+
