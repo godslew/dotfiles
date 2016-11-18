@@ -84,7 +84,6 @@ if has('vim_starting') && dein#check_install()
 endif
 
 syntax on
-colorscheme molokai
 let g:go_fmt_autosave = 1
 let g:go_fmt_fail_silently = 1
 let g:go_fmt_command = "goimports"
@@ -118,9 +117,8 @@ let g:neocomplete#enable_at_startup = 1
 set completeopt=menu,preview
 
 ""lightline setting
-let g:lightline = {
-                        \ 'colorscheme': 'molokai',
-                        \ }
+colorscheme molokai
+syntax on
 ""autofomatter
 augroup autoformat_autocmd
         autocmd!
@@ -198,5 +196,5 @@ au FileType unite inoremap <silent> <buffer> <expr> <C-j> unite#do_action('split
 au FileType unite nnoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
 au FileType unite inoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
 " ESCキーを2回押すと終了する
-au FileType unite nnoremap <silent> <buffer> <ESC><ESC> q
-au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
+au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
+au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
