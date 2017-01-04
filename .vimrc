@@ -124,6 +124,7 @@ augroup autoformat_autocmd
         autocmd!
         ""au FileType *.ts nnoremap <Leader>f :<C-u>Autoformat<CR>
         au BufWrite *.ts :Autoformat
+        au BufWrite *.html :Autoformat
 augroup END
 ""vimsession
 let g:session_default_name = '.default.session'
