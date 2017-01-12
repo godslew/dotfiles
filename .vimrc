@@ -43,6 +43,9 @@ set showmatch
 " "新しい行を作った時に高度な自動インデントを行う
 set smarttab
 
+"backspace
+set backspace=indent,eol,start
+
 "tab 8 -> ?
 
 "undodir
